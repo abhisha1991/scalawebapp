@@ -26,7 +26,7 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   }
 
   def azsml() = Action { implicit request: Request[AnyContent] =>
-    render(views.html.azsml())
+    Ok(views.html.azsml())
   }
 
   def modelFunc = Action(BodyParsers.parse.json) { request =>
